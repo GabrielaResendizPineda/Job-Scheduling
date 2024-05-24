@@ -1,0 +1,58 @@
+Descripción General del Código:
+
+Este código en Python implementa una aplicación de planificación de tareas con una interfaz gráfica de usuario (GUI) en Tkinter y utiliza Matplotlib para mostrar un diagrama de Gantt. Aquí hay una descripción general de las partes principales del código:
+
+Clases:
+
+Operation: Representa una operación con un identificador (operation_id) y una lista de duraciones en cada máquina (durations).
+Job: Representa un trabajo con un identificador (job_id) y una cola de operaciones (operations).
+Machine: Representa una máquina con un identificador (machine_id). Tiene una cola de operaciones (queue) y un tiempo de finalización (end_time).
+Métodos:
+
+schedule_operation (en la clase Machine): Planifica una operación en la máquina, teniendo en cuenta el tiempo de inicio y finalización. Actualiza el tiempo de finalización de la máquina.
+process_queue (en la clase Machine): Procesa la cola de operaciones de la máquina y devuelve información sobre las operaciones procesadas.
+Función start_simulation:
+
+Crea un gráfico de Gantt usando Matplotlib.
+Asigna operaciones a máquinas y simula la planificación.
+Dibuja barras horizontales en el gráfico de Gantt para representar las operaciones.
+Muestra el tiempo de inicio y fin en el gráfico.
+Ventana principal de Tkinter:
+
+Solicita al usuario el número de máquinas y trabaja con máquinas creadas.
+Solicita al usuario el número de trabajos y para cada trabajo:
+Pide un nombre para el trabajo.
+Pide las operaciones para ese trabajo (separadas por coma).
+Para cada operación, solicita los tiempos de ejecución en cada máquina (separados por coma).
+Botón para iniciar la simulación:
+
+Activa la función start_simulation cuando se hace clic.
+Manual de Usuario:
+
+Inicio de la Aplicación:
+
+Ejecutar el código en un entorno Python.
+La aplicación solicitará al usuario ingresar el número de máquinas y trabajos.
+Ingreso de Datos:
+
+Para cada trabajo, se solicitará un nombre y las operaciones con sus tiempos de ejecución en cada máquina.
+Iniciar Simulación:
+
+Después de ingresar los datos, hacer clic en el botón "Iniciar Simulación".
+Se abrirá una nueva ventana con el diagrama de Gantt que representa la planificación de tareas.
+Visualización del Diagrama de Gantt:
+
+En el gráfico de Gantt, cada barra horizontal representa una operación.
+Los colores diferentes indican operaciones de trabajos diferentes.
+Los tiempos de inicio y fin se muestran en el gráfico.
+Notas Adicionales:
+
+Se utiliza el paquete simpledialog para solicitar datos al usuario.
+El código utiliza enfoques de programación orientada a objetos para organizar la lógica de simulación y la interfaz gráfica.
+Matplotlib se utiliza para la visualización del diagrama de Gantt.
+Este código proporciona una herramienta interactiva para la planificación de tareas y la visualización de la programación resultante.
+
+
+
+
+
